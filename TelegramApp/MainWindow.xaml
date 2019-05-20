@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TelegramApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="550" ResizeMode="NoResize"
+        Title="MainWindow" Height="650" Width="554.5" ResizeMode="NoResize"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" >
     <Window.Resources>
         <Style TargetType="Canvas">
@@ -13,6 +13,16 @@
                 <Setter Property="Background" Value="#5682a3"></Setter>
             </Style.Setters>
         </Style>
+
+        
+        
+        <Style TargetType="Border">
+            <Style.Setters>
+                <Setter Property="BorderBrush" Value="White"></Setter>
+                <Setter Property="BorderThickness" Value="3"></Setter>
+            </Style.Setters>
+        </Style>
+
         <Style TargetType="TextBlock">
             <Style.Setters>
                 <Setter Property="Foreground" Value="White"></Setter>
@@ -27,9 +37,9 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="300*"/>
-            <RowDefinition Height="90*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="486*"/>
+            <RowDefinition Height="91*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45*"/>
@@ -52,13 +62,16 @@
                 <materialDesign:PackIcon Kind="Magnify" Height="30" Width="30" Canvas.Top="6" Canvas.Left="5"></materialDesign:PackIcon>
             </Canvas>
             <Canvas Width="42">
+                <Border  Height="4" Canvas.Left="20" Canvas.Top="9" Width="4"/>
+                <Border  Height="4" Canvas.Left="20" Canvas.Top="19" Width="4"/>
+                <Border  Height="4" Canvas.Left="20" Canvas.Top="29" Width="4"/>
             </Canvas>
         </StackPanel>
-        <TextBox Margin="10,5,10,402" Grid.Row="1"/>
+        <TextBox Margin="10,10,10,446" Grid.Row="1"/>
 
-        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2" Margin="0,45,0,0">
+        <StackPanel  Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2" Margin="0,45,0,0">
             <Grid Height="50" Margin="0 0 0 10">
-                <TextBlock Margin="21,15,128,16" Panel.ZIndex="1">VG</TextBlock>
+                <TextBlock Margin="22,15,127,16" Panel.ZIndex="1">VG</TextBlock>
                 <Ellipse Height="40" Width="40" Fill="#fba76f" Margin="10,5,118,5"></Ellipse>
                 <TextBlock Foreground="Black"  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">Vlad</TextBlock>
                 <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">TelegramApp</TextBlock>
@@ -85,6 +98,24 @@
                 <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">Товар успешно к...</TextBlock>
             </Grid>
         </StackPanel>
+
+        <Canvas Grid.Column="1" Grid.Row="2" Background="White">
+            <TextBlock Panel.ZIndex="1" Canvas.Left="23" FontSize="18" Canvas.Top="18">VG</TextBlock>
+            <Ellipse Height="50" Width="50" Fill="#fba76f" Margin="10,5,118,5"></Ellipse>
+
+            <TextBox Canvas.Left="65" Canvas.Top="5" Height="50" Width="252"></TextBox>
+
+            <TextBlock Panel.ZIndex="1" Canvas.Left="333" Canvas.Top="18" FontSize="18">TW</TextBlock>
+            <Ellipse Canvas.Right="0" Height="50" Width="50"  Fill="#e57979" Canvas.Left="322" Canvas.Top="5"/>
+
+            <materialDesign:PackIcon Foreground="Gray" Opacity="0.5" Kind="SmileyHappy" Canvas.Left="294" Canvas.Top="5" Height="23" Width="23"></materialDesign:PackIcon>
+
+            <materialDesign:PackIcon Foreground="Gray" Kind="File" Height="25" Width="30" Canvas.Left="65" Canvas.Top="60"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Foreground="Gray" Kind="Camera" Height="25" Width="30" Canvas.Left="109" Canvas.Top="61"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Foreground="Gray" Kind="Microphone" Height="25" Width="30" Canvas.Left="148" Canvas.Top="61"></materialDesign:PackIcon>
+
+            <TextBlock Canvas.Left="278" Canvas.Top="61" Height="20" Width="39" Foreground="#5682a3" FontWeight="Bold">SEND</TextBlock>
+        </Canvas>
 
     </Grid>
 </Window>
