@@ -18,3 +18,5 @@ C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\bin\Debug\Ma
 C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\obj\Debug\TelegramApp.csproj.CopyComplete
+C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\obj\Debug\LightTheme.baml
+C:\Users\гороховв.CORP\source\repos\TelegramApp\TelegramApp\obj\Debug\DarkTheme.baml

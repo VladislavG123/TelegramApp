@@ -6,34 +6,10 @@
         xmlns:local="clr-namespace:TelegramApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="554.5" ResizeMode="NoResize"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" >
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Name="window">
     <Window.Resources>
-        <Style TargetType="Canvas">
-            <Style.Setters>
-                <Setter Property="Background" Value="#5682a3"></Setter>
-            </Style.Setters>
-        </Style>
-
-        
-        
-        <Style TargetType="Border">
-            <Style.Setters>
-                <Setter Property="BorderBrush" Value="White"></Setter>
-                <Setter Property="BorderThickness" Value="3"></Setter>
-            </Style.Setters>
-        </Style>
-
-        <Style TargetType="TextBlock">
-            <Style.Setters>
-                <Setter Property="Foreground" Value="White"></Setter>
-                <Setter Property="FontSize" Value="14"></Setter>
-            </Style.Setters>
-        </Style>
-        <Style TargetType="materialDesign:PackIcon">
-            <Style.Setters>
-                <Setter Property="Foreground" Value="White"></Setter>
-            </Style.Setters>
-        </Style>
+        <ResourceDictionary x:Name="resurseDictionary" Source="LightTheme.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -47,16 +23,16 @@
         </Grid.ColumnDefinitions>
 
         <Canvas>
-            <Border BorderBrush="White" BorderThickness="3" Height="3" Canvas.Top="10" Width="20" Canvas.Left="7"/>
-            <Border BorderBrush="White" BorderThickness="3" Height="3" Canvas.Top="18" Width="20" Canvas.Left="7"/>
-            <Border BorderBrush="White" BorderThickness="3" Height="3" Canvas.Top="26" Width="20" Canvas.Left="7"/>
+            <Border BorderThickness="3" Height="3" Canvas.Top="10" Width="20" Canvas.Left="7"/>
+            <Border BorderThickness="3" Height="3" Canvas.Top="18" Width="20" Canvas.Left="7"/>
+            <Border BorderThickness="3" Height="3" Canvas.Top="26" Width="20" Canvas.Left="7"/>
             <TextBlock Canvas.Left="43" Foreground="White" FontSize="14" Canvas.Top="10" Width="115" Height="24">Telegram</TextBlock>
         </Canvas>
 
         <StackPanel Grid.Column="1" Orientation="Horizontal">
             <Canvas Width="294">
-                <TextBlock Canvas.Top="10">TravelWay Corporation</TextBlock>
-                <TextBlock Opacity="0.7" FontSize="12" Canvas.Top="12.5" Canvas.Left="145">5 members</TextBlock>
+                <TextBlock Foreground="{StaticResource chatHeaderColor}" Canvas.Top="10">TravelWay Corporation</TextBlock>
+                <TextBlock Foreground="{StaticResource chatHeaderColor}" Opacity="0.7" FontSize="12" Canvas.Top="12.5" Canvas.Left="145">5 members</TextBlock>
             </Canvas>
             <Canvas Width="40">
                 <materialDesign:PackIcon Kind="Magnify" Height="30" Width="30" Canvas.Top="6" Canvas.Left="5"></materialDesign:PackIcon>
@@ -67,45 +43,45 @@
                 <Border  Height="4" Canvas.Left="20" Canvas.Top="29" Width="4"/>
             </Canvas>
         </StackPanel>
-        <TextBox Margin="10,10,10,446" Grid.Row="1"/>
+        <TextBox Background="{StaticResource moreLightBackgroundColor}" Margin="10,10,10,446" Grid.Row="1"/>
 
         <StackPanel  Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2" Margin="0,45,0,0">
             <Grid Height="50" Margin="0 0 0 10">
-                <TextBlock Margin="22,15,127,16" Panel.ZIndex="1">VG</TextBlock>
+                <TextBlock Foreground="White" Margin="22,15,127,16" Panel.ZIndex="1">VG</TextBlock>
                 <Ellipse Height="40" Width="40" Fill="#fba76f" Margin="10,5,118,5"></Ellipse>
-                <TextBlock Foreground="Black"  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">Vlad</TextBlock>
-                <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">TelegramApp</TextBlock>
+                <TextBlock  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">Vlad</TextBlock>
+                <TextBlock Opacity="0.6" FontSize="11" Margin="55,29,10,2">TelegramApp</TextBlock>
             </Grid>
 
             <Grid Height="50" Margin="0 0 0 10">
-                <TextBlock Margin="20,15,128,16" Panel.ZIndex="1">BM</TextBlock>
+                <TextBlock Foreground="White" Margin="20,15,128,16" Panel.ZIndex="1">BM</TextBlock>
                 <Ellipse Height="40" Width="40" Fill="#80d066" Margin="10,5,118,5"></Ellipse>
-                <TextBlock Foreground="Black"  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">Бот Максим</TextBlock>
-                <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">Хотите узнать ка...</TextBlock>
+                <TextBlock  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">Бот Максим</TextBlock>
+                <TextBlock Opacity="0.6"  FontSize="11" Margin="55,29,10,2">Хотите узнать ка...</TextBlock>
             </Grid>
 
             <Grid Height="50" Margin="0 0 0 10">
-                <TextBlock Margin="20,15,128,16" Panel.ZIndex="1">TW</TextBlock>
+                <TextBlock Foreground="White" Margin="20,15,128,16" Panel.ZIndex="1">TW</TextBlock>
                 <Ellipse Height="40" Width="40" Fill="#e57979" Margin="10,5,118,5"></Ellipse>
-                <TextBlock Foreground="Black"  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">TravelWay co...</TextBlock>
-                <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">Руслан, в аудитори...</TextBlock>
+                <TextBlock  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">TravelWay co...</TextBlock>
+                <TextBlock Opacity="0.6" FontSize="11" Margin="55,29,10,2">Руслан, в аудитори...</TextBlock>
             </Grid>
 
             <Grid Height="50" Margin="0 0 0 10">
-                <TextBlock Margin="24,15,124,16" Panel.ZIndex="1">PI</TextBlock>
+                <TextBlock Foreground="White" Margin="24,15,124,16" Panel.ZIndex="1">PI</TextBlock>
                 <Ellipse Height="40" Width="40" Fill="#cd92e2" Margin="10,5,118,5"></Ellipse>
-                <TextBlock Foreground="Black"  FontSize="13" Margin="55,10,10,21" FontWeight="Bold">PizzaAppBot</TextBlock>
-                <TextBlock Opacity="0.6" Foreground="Black" FontSize="11" Margin="55,29,10,2">Товар успешно к...</TextBlock>
+                <TextBlock FontSize="13" Margin="55,10,10,21" FontWeight="Bold">PizzaAppBot</TextBlock>
+                <TextBlock Opacity="0.6" FontSize="11" Margin="55,29,10,2">Товар успешно к...</TextBlock>
             </Grid>
         </StackPanel>
 
-        <Canvas Grid.Column="1" Grid.Row="2" Background="White">
-            <TextBlock Panel.ZIndex="1" Canvas.Left="23" FontSize="18" Canvas.Top="18">VG</TextBlock>
+        <Canvas Grid.Column="1" Grid.Row="2" Background="{StaticResource backgroundColor}">
+            <TextBlock Foreground="White" Panel.ZIndex="1" Canvas.Left="23" FontSize="18" Canvas.Top="18">VG</TextBlock>
             <Ellipse Height="50" Width="50" Fill="#fba76f" Margin="10,5,118,5"></Ellipse>
 
-            <TextBox Canvas.Left="65" Canvas.Top="5" Height="50" Width="252"></TextBox>
+            <TextBox x:Name="chatTextBox" TextChanged="ChatTextBoxTextChanged" Background="{StaticResource moreLightBackgroundColor}" Canvas.Left="65" Canvas.Top="5" Height="50" Width="252"></TextBox>
 
-            <TextBlock Panel.ZIndex="1" Canvas.Left="333" Canvas.Top="18" FontSize="18">TW</TextBlock>
+            <TextBlock Foreground="White" Panel.ZIndex="1" Canvas.Left="333" Canvas.Top="18" FontSize="18">TW</TextBlock>
             <Ellipse Canvas.Right="0" Height="50" Width="50"  Fill="#e57979" Canvas.Left="322" Canvas.Top="5"/>
 
             <materialDesign:PackIcon Foreground="Gray" Opacity="0.5" Kind="SmileyHappy" Canvas.Left="294" Canvas.Top="5" Height="23" Width="23"></materialDesign:PackIcon>

@@ -15,14 +15,34 @@ using System.Windows.Shapes;
 
 namespace TelegramApp
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private string _currentThemeUri;
+
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show(@"Чтобы поменять тему, введите ""Сменить тему"" в поле для ввода сообщений");
+            _currentThemeUri = @"LightTheme.xaml";
+        }
+
+
+        private void ChatTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (chatTextBox.Text.ToLower() == "сменить тему")
+            {
+                if (_currentThemeUri == @"LightTheme.xaml")
+                {
+                    _currentThemeUri = @"DarkTheme.xaml";
+                }
+                else
+                {
+                    _currentThemeUri = @"LightTheme.xaml";
+                }
+                resurseDictionary.Source = new Uri(_currentThemeUri, UriKind.Relative);
+
+                chatTextBox.Text = "";
+            }
         }
     }
 }
